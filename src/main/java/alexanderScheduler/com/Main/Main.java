@@ -57,13 +57,9 @@ public class Main {
                 .withIdentity("myTrigger", Scheduler.DEFAULT_GROUP)
                 .withSchedule(CronScheduleBuilder.cronSchedule("0 0/10 1,2 ? * MON-SUN 2024-2026"))// segundos minutos horas meses dias anio
                 .startAt(DateBuilder.dateOf(1, 40, 0, 30, 6, 2024))
-                         //+ ","+ (minute+1) +","+ (minute + 2) +","+ (minute+3)
-
-                //.startAt(DateBuilder.dateOf(20, 38, 0, 29, 6, 2024))
-
                 .build();
 
-// Registro dentro del Scheduler
+// Registro dentro del Schedulergi
 
         System.out.println("triguer start time is: "+  trigger2.getStartTime());
         scheduler.scheduleJob(jobDetail, trigger3);
